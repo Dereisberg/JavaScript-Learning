@@ -1,0 +1,27 @@
+{
+    "name": "mocha-async-test",
+    "version": "1.0.0",
+    "description": "Mocha async test",
+    "main": "hello.js",
+    "scripts": {
+      "test": "mocha"
+    },
+    "keywords": [
+      "mocha",
+      "test",
+      "async"
+    ],
+    "author": "Oblivion Zhang",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Dereisberg/JavaScript-Learning.git"
+    },
+    "dependencies": {
+      "mz": "2.4.0"
+    },
+    "devDependencies": {
+      "mocha": "3.0.2"
+    }
+  }
+  
