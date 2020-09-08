@@ -1,0 +1,23 @@
+{
+    "name": "mocha-test",
+    "version": "1.0.0",
+    "description": "Mocha simple test",
+    "main": "hello.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "mocha",
+        "test"
+    ],
+    "author": "Oblivion Zhang",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dereisberg/JavaScript-Learning.git"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "^8.1.3"
+    }
+}
