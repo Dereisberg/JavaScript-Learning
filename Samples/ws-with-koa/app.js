@@ -72,7 +72,7 @@ function createWebSocketServer(server, onConnection, onMessage, onClose, onError
             client.send(data);
         });
     };
-    onConnection = onConnection||function(){
+    onConnection = onConnection || function(){
         console.log('[WebSocket] connected.');
     };
     onMessage = onMessage || function (msg){
@@ -85,7 +85,7 @@ function createWebSocketServer(server, onConnection, onMessage, onClose, onError
         console.log('[WebSocket] error: ' + err);
     };
     ws.on('connection', function (ws){
-        let location = url.parse(ws.upgradeReg.url, true);
+        let location = url.parse(ws.upgradeReq.url, true);
         console.log('[WebSocketServer] connection: ' + location.href);
         ws.on('message', onMessage);
         ws.on('close', onClose);
@@ -95,7 +95,7 @@ function createWebSocketServer(server, onConnection, onMessage, onClose, onError
             ws.close(4000, 'Invalid URL');
         }
         // check user:
-        let user = parseUser(ws.upgradeReg);
+        let user = parseUser(ws.upgradeReq);
         if(!user){
             ws.close(4001, 'Invalid user');
         }
@@ -132,7 +132,7 @@ function onConnect() {
 
 function onMessage(message){
     console.log(message);
-    if(message && message.trime()){
+    if(message && message.trim()){
         let msg = createMessage('chat', this.user, message.trim());
         this.wss.broadcast(msg);
     }
